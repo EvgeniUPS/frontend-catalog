@@ -5,21 +5,22 @@ import SearchPanel from '../search-panel'
 import TodoList from '../todo-list'
 import ItemStatusFilter from '../item-status-filter'
 import ItemAddForm from '../item-add-form'
-
+import data from './data.json'
 import './app.css'
 
 export default class App extends Component {
   maxId = 100
 
   state = {
-    todoData: [
-      this.createTodoItem('Drink Coffee'),
-      this.createTodoItem('Make Awesome App'),
-      this.createTodoItem('Have a lunch')
-      // { label: 'Drink Coffee', important: false, id: 1 },
-      // { label: 'Make Awesome App', important: true, id: 2 },
-      // { label: 'Have a lunch', important: false, id: 3 }
-    ],
+    todoData: data,
+    // todoData: [
+    //   this.createTodoItem('Drink Coffee'),
+    //   this.createTodoItem('Make Awesome App'),
+    //   this.createTodoItem('Have a lunch')
+    //   // { label: 'Drink Coffee', important: false, id: 1 },
+    //   // { label: 'Make Awesome App', important: true, id: 2 },
+    //   // { label: 'Have a lunch', important: false, id: 3 }
+    // ],
     term: '',
     filter: 'all' //active, all, done
   }
